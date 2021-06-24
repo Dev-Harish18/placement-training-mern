@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "placementtraining",
+  "private_key_id": "42755db3fa6f39d37f80e5141907fd14ed0d51a2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCtuPc3wp1fvPZ/\n92v4g/cy5pPS85KoGqExPL+pYMZVf6Q1vCeofOC3MwhtvQW4/sRcMfhnMRMxQ8/P\ngJdihmXnBM7A+uwf8mj81YoX3t5hb+n6cIlP65killILHOHQiuBFSsYxViyXIc+Y\nVA+QaqsObhvPu0vLo9kiPoWbzxW529lSzt62qjRj7K8N543pNlZJvvTID65ZMttn\nbGkSTft8uOn2fyXkV7DYQ6v2HiyJxZ5uNsojYn7vVn7ib6MDo+l6SQ30KhS9yNlf\nFdxp7MndnZgow63tNLS2QKT6jXo1qK8gy9oZNv917mELXIBc3YL/z90/iYIVt+jH\n8MzVzaeJAgMBAAECggEARqlCnUKiwotY9GoOV9JNnT2eiSKb15alVCKyjtGXOrWl\ndFnpA6ZvvPScDA7jogC2nA2TTV3vwY0knPFgIioqjtIsyuAFZWUzgQvWlKkJaTad\nREm8AG8DJcdg7bY8v5eNa4HjpbO4hWyyRPKENii9FSyCUXeMd/NYYY5uyBZubt8p\n2XKgPEvlBKMMLExM48VpaJm/E/ESB+6zmJo1AlfedPbfyhBhh6rAlFtZ6+gCq/gp\nmUKl7GvFM5vC/WfseoCHS4eBtAEafJr/i/P+BDe4CN0brORdYKJ136SHwMim9Gvh\nSOU+PcgzinqrihT1/MLjqeZKqkSPtLsrqPz3RNbmxQKBgQDvCwxDJWjlMEypnGYd\n98nuaZukSBPyh7S8pbpy/gxGytjMSEoQb9SEKsANLLSlzYGLiqFpeV3bCG2nsWSQ\nJwVLS9P5VZ0Jv3FqzFaQ6qSdtIEPbsmbIWDqysbO/4KxDpL36crtYZoq2wPo4BgT\nY82hYGSw4BbO+thKoRY0SvllGwKBgQC6C7bzvNqKHSly63SnOsgUMNC3zr10kfB7\noQQzGCgnJB/4y0tvXMoB5yBHeC1RCG7GZx65jaSNKrrLtrvxLaTkEzbUG5v9qDZ9\nkwe5gz24s7Krc+Fyj+czvVZATDnfxxv19ODqOs0wxddoBLHlJNhyKrBSlGi4zAoq\nw7EimpPEKwKBgQDhopcHhndV5tpmOye03+Dutybf0d1qT6hNbU3qH10tMWmkohOv\nIjACNWwkw28dFjdSpR+pNJNgHbuLz4kx/HMl2MSUlLhvrBJ9kbWggqux5ODx1Uxd\nrwsRdShl2Y7eW/hkJH2Uxk1EaIlvNp/jJZDC4/8Hae59nw+smhMgdyijwwKBgQCS\nVjaQn0KSkn+Qyg1WoJDR+NejTHWO5F/xDmS8P8sNhoezbUyniqfGOWMVdDzI2UYw\nvtnW/8en1i1ZoSFRgiKJ12cwDYt0SMSbn3PbApUg3A+0dpClSPWFp+7Y4lw/XWDr\n5LKo6pmNPIDDa7X11DaADn3kZqG8gZmZq5V/73A9QwKBgBXwSD32n0Pxi3WJ8U5V\nK5AIJuUZa/0ZgwP9qpC4HZMK5+tKSlkpFsdHOmDE1NEvtxTaVYdbmETiPF8LiNvz\nXNfodIPh+RcHuk4q/JwPrKMnRLKdljwCv57nCnrR+TK5B9UlzFl5AUMlo+UcV4Sl\neGqyZ8DQM6S/zQSZRynbPAej\n-----END PRIVATE KEY-----\n",
+  "client_email": "placementtraining@placementtraining.iam.gserviceaccount.com",
+  "client_id": "105435280192990444612",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/placementtraining%40placementtraining.iam.gserviceaccount.com"
+}
