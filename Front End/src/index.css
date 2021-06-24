@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.MuiDrawer-paper {
+  width: 240px !important;
+}
+.MuiListItemText-primary {
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: #ff6e6c;
+  text-align: center;
+}
+a:active {
+  color: #ff6e6c;
+}
+.MuiTypography-body1 {
+  font-weight: 400;
+}
+
+@media (max-width: 1200px) {
+  .MuiDrawer-paper {
+    width: 50% !important;
+  }
+}
