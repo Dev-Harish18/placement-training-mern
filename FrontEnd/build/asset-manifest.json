@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e54398f0.chunk.css",
+    "main.js": "/static/js/main.ca1a8825.chunk.js",
+    "main.js.map": "/static/js/main.ca1a8825.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f0aa4aff.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f0aa4aff.js.map",
+    "static/js/2.83e52caf.chunk.js": "/static/js/2.83e52caf.chunk.js",
+    "static/js/2.83e52caf.chunk.js.map": "/static/js/2.83e52caf.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.e54398f0.chunk.css.map": "/static/css/main.e54398f0.chunk.css.map",
+    "static/js/2.83e52caf.chunk.js.LICENSE.txt": "/static/js/2.83e52caf.chunk.js.LICENSE.txt",
+    "static/media/404_gif.7725c6cd.gif": "/static/media/404_gif.7725c6cd.gif",
+    "static/media/cardQuiz.591ca8de.jpg": "/static/media/cardQuiz.591ca8de.jpg",
+    "static/media/main.50c42ab2.jpg": "/static/media/main.50c42ab2.jpg",
+    "static/media/profile.f94169a0.jpg": "/static/media/profile.f94169a0.jpg",
+    "static/media/quiz.860ad6e6.png": "/static/media/quiz.860ad6e6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f0aa4aff.js",
+    "static/js/2.83e52caf.chunk.js",
+    "static/css/main.e54398f0.chunk.css",
+    "static/js/main.ca1a8825.chunk.js"
+  ]
+}
