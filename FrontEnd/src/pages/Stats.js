@@ -63,7 +63,7 @@ const Stats = (props) => {
       setStats(state);
     };
     fetchStats();
-  }, []);
+  }, [dispatch, history, props.match.params.id]);
 
   return (
     <Grid container justify="center" spacing={2}>

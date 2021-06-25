@@ -55,7 +55,7 @@ const Question = ({ id, setQuestions, questions, initial, quiz }) => {
     } else {
       setQuestions([...questions, questionData]);
     }
-  }, [questionData]);
+  }, [questionData, questions, setQuestions]);
 
   //Handle change
   const handleChange = (e) => {
@@ -125,7 +125,6 @@ const Question = ({ id, setQuestions, questions, initial, quiz }) => {
                 type="text"
                 autoFocus
                 color="primary"
-                autoFocus
                 label={`Option ${option}`}
                 value={questionData.options[index]}
               />

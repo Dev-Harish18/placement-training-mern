@@ -45,14 +45,15 @@ const GetQuiz = (props) => {
       }
     };
     fetchQuiz();
-  }, []);
+  }, [dispatch, history, props.match.params.id]);
 
   useEffect(() => {
+    let data;
     const updateUser = async () => {
       const timeTaken = Date.now() - startTime;
       let minutes = Math.round(timeTaken / 60000);
 
-      const { data } = await axios({
+      data = await axios({
         method: "POST",
         url: `/events/${props.match.params.id}`,
         data: {
@@ -61,11 +62,14 @@ const GetQuiz = (props) => {
         },
       });
     };
+    if (data.data.status !== "success") {
+      return dispatch(setAlert(data.message.split(",")[0], "error"));
+    }
     if (score !== -1) dispatch(setAlert(`Your score is ${score}`, "success"));
     if (quiz && !quiz.attended) {
       updateUser();
     }
-  }, [score]);
+  }, [score, dispatch, props.match.params.id, quiz, startTime]);
 
   //Handle submit
   const handleSubmit = (e) => {

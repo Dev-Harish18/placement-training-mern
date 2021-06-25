@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setCurrentUser } from "../redux/user/userActions";
-import { Redirect, useHistory } from "react-router";
+import { useHistory } from "react-router";
 import axios from "../axios";
 import { setAlert } from "../redux/alert/alertActions";
 import { v4 as uuidv4 } from "uuid";
@@ -29,7 +29,7 @@ const EditQuiz = (props) => {
     };
 
     fetchEvent();
-  }, []);
+  }, [history, props.match.params.id]);
 
   const initial = {
     name: "",

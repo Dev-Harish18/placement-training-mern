@@ -34,7 +34,7 @@ const AllQuizes = () => {
     };
 
     fetchQuizes();
-  }, []);
+  }, [dispatch]);
 
   return (
     <Grid container alignItems="center" spacing={3} justify="center">

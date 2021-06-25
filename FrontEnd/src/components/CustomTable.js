@@ -28,7 +28,7 @@ const CustomTable = ({ details }) => {
                   {row.map((col) => (
                     <TableCell
                       style={
-                        index == 0
+                        index === 0
                           ? { fontWeight: "bolder", textAlign: "center" }
                           : { textAlign: "center" }
                       }>

@@ -56,7 +56,7 @@ const Details = () => {
     };
 
     fetchDetails();
-  }, []);
+  }, [dispatch, history]);
 
   const handleDownload = async () => {
     setLoader(true);

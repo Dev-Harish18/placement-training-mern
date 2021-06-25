@@ -96,7 +96,7 @@ const Profile = (props) => {
       setGpData(data.data.filteredData[1]);
     };
     fetchData();
-  }, []);
+  }, [dispatch, history, props.match.params.roll]);
 
   const handleChange = (e) => {
     if (e.target.name === "name") setName(e.target.value);

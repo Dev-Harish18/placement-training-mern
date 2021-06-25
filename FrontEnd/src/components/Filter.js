@@ -26,7 +26,7 @@ const Filter = ({ filters, filter, setFilters }) => {
 
   useEffect(() => {
     setFilters(filters.map((filter) => (filter.id === id ? data : filter)));
-  }, [data]);
+  }, [data,filters,id,setFilters]);
   const handleChange = (e) => {
     setData({
       ...data,

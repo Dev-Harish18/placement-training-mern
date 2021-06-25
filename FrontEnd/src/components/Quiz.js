@@ -26,8 +26,8 @@ const Quiz = ({ info }) => {
     info;
 
   useEffect(() => {
-    dispatch(setAnswer(quesNo, value == correctOption - 1));
-  }, [value]);
+    dispatch(setAnswer(quesNo, value === correctOption - 1));
+  }, [value, dispatch, quesNo, correctOption]);
   const handleChange = (e) => {
     setValue(e.target.value);
   };
