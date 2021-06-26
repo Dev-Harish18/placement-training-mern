@@ -17,6 +17,8 @@ function createAndSendToken(user, statusCode, req, res) {
     expires: new Date(
       Date.now() + process.env.COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
     ),
+    sameSite: "None",
+    secure: false,
   });
 
   user.password = undefined;
@@ -143,6 +145,8 @@ exports.signOut = (req, res) => {
   res.cookie("jwt", "loggedout", {
     expires: new Date(Date.now() + 10 * 1000),
     httpOnly: true,
+    sameSite: "None",
+    secure: false,
   });
   console.log("Signouted");
   res.status(200).json({ status: "success" });
