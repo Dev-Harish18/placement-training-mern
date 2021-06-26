@@ -16,7 +16,7 @@ connectDB();
 //cors
 const corsOptions = {
   //To allow requests from client
-  origin: ["http://localhost:3001"],
+  origin: ["https://placementtraining.netlify.app"],
   credentials: true,
 };
 app.use(cors(corsOptions));
