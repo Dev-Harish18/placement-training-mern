@@ -39,6 +39,8 @@ exports.mustBeLoggedIn = catchAsync(async (req, res, next) => {
     token = req.headers.authorization.split(" ")[1];
   else if (req.cookies.jwt) token = req.cookies.jwt;
 
+  console.log(token);
+
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
   const user = await User.findById(decoded.id);
   if (!user) return next(new AppError(401, "Unauthenticated!Please sign in"));
@@ -142,6 +144,7 @@ exports.signOut = (req, res) => {
     expires: new Date(Date.now() + 10 * 1000),
     httpOnly: true,
   });
+  console.log("Signouted");
   res.status(200).json({ status: "success" });
 };
 
