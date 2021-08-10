@@ -21,10 +21,10 @@ exports.getSheetData = catchAsync(async (req, res, next) => {
     range: "Sheet1!A1:X60",
   });
   const sheetData = data.data.values;
-  sheetData.map((row) => {
-    for (let col of row) process.stdout.write(`${col} `);
-    console.log("\n");
-  });
+//   sheetData.map((row) => {
+//     for (let col of row) process.stdout.write(`${col} `);
+//     console.log("\n");
+//   });
   res.status(200).json({
     status: "success",
     data: {
@@ -33,25 +33,6 @@ exports.getSheetData = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.updateSheetData = catchAsync(async (req, res, next) => {
-  const googleSheets = req.googleSheets;
-  const clientData = req.body.dataArray;
-
-  const updatedData = await googleSheets.spreadsheets.values.update({
-    spreadsheetId: process.env.SPREADSHEET_ID,
-    range: "A1:X60",
-    valueInputOption: "USER_ENTERED",
-    resource: {
-      values: clientData,
-    },
-  });
-  res.status(200).json({
-    status: "success",
-    data: {
-      updatedData: updatedData.config.data.values,
-    },
-  });
-});
 
 exports.filterSheetData = catchAsync(async (req, res, next) => {
   const googleSheets = req.googleSheets;
@@ -65,41 +46,33 @@ exports.filterSheetData = catchAsync(async (req, res, next) => {
     spreadsheetId: process.env.SPREADSHEET_ID,
     range: "Sheet1!A1:X60",
   });
+  //Extract Sheet Data
   const sheetData = data.data.values;
 
-  console.log(`sheetData:(${sheetData.length})`);
-  sheetData.map((row) => {
-    for (let col of row) process.stdout.write(`${col} `);
-    console.log("\n");
-  });
-
-  let condition = "";
-
-  filterData.forEach((filter, i) => {
-    if (filter.index == 23 || filter.index == 4)
-      condition += `row[${filter.index}] ${filter.operator} '${filter.value}'`;
-    else condition += `row[${filter.index}] ${filter.operator} ${filter.value}`;
-    if (i != filterData.length - 1) condition += "&&";
-  });
-  console.log("Condition:\n", condition);
   //Filtering the data array based the condition string
   const filteredData = sheetData.filter((row, index) => {
     let condition = "";
+    
+    //Build condition string by iterating filter object array
     filterData.forEach((filter, i) => {
+      //If cell is not empty
       if (row[filter.index] != "-") {
+        //String Value
         if (filter.index == 23 || filter.index == 4)
           condition += `row[${filter.index}] ${filter.operator} '${filter.value}'`;
+        //Integer Value
         else
           condition += `row[${filter.index}] ${filter.operator} ${filter.value}`;
         condition += "&&";
       }
     });
+    
+    //Remove last "&&" in condition string
     condition = condition.slice(0, -2);
-    console.log("Condition:\n", condition);
-
+    
+    //Return those satisfy the condition and always return 1st row
     if (index == 0 || eval(condition)) return row;
   });
-  console.log(`FilteredData:(${filteredData.length})`);
 
   res.status(200).json({
     status: "success",
