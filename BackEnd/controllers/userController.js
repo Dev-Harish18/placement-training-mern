@@ -128,8 +128,7 @@ exports.resetPassword = catchAsync(async (req, res, next) => {
       $gt: Date.now(),
     },
   });
-  console.log("hashed:", hashedToken);
-  console.log("time", new Date(Date.now()));
+  
   if (!user) return next(new AppError(401, "Token in invalid or has expired"));
   //If valid , reset password
   user.password = req.body.password;
@@ -148,7 +147,6 @@ exports.signOut = (req, res) => {
     sameSite: "none",
     secure: true,
   });
-  console.log("Signouted");
   res.status(200).json({ status: "success" });
 };
 
